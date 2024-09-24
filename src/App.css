@@ -1,0 +1,161 @@
+/* Estilo general del cuerpo para un fondo oscuro con texto claro */
+body {
+  background-color: #121212; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Fuente moderna */
+}
+
+/* Estilo para el contenedor principal */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-color: #191919; /* Fondo un poco más oscuro que el cuerpo */
+}
+
+/* Estilo para cada división dentro del contenedor */
+.div1, .div2, .div3, .div4 {
+  background-color: #282828; /* Fondo de cada sección */
+  border-radius: 8px; /* Esquinas redondeadas */
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  overflow: auto; /* Añade desplazamiento solo cuando es necesario */
+  max-height: 100%;
+}
+
+/* Estilo para los encabezados */
+h2 {
+  color: #ffffff; /* Color de los encabezados */
+  font-size: 1.5rem; /* Tamaño de fuente del encabezado */
+  font-weight: 600; /* Negrita */
+  margin-bottom: 1rem; /* Espacio inferior */
+}
+
+/* Estilo para el contenedor del model-viewer */
+.model-viewer-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 25%;
+}
+
+/* Estilo para el contenedor del total del cotizador */
+.cotizador-total-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para el total del cotizador */
+.cotizador_total {
+  color: #ffffff; /* Color de texto claro */
+  margin-right: 10px;
+}
+
+/* Estilo para el botón del cotizador */
+.cotizador_button {
+  background-color: #1db954; /* Verde de Spotify */
+  color: #ffffff; /* Texto blanco */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px; /* Bordes redondeados */
+  cursor: pointer;
+  width: 300px;
+  margin-right: 20px;
+  transition: background-color 0.3s ease; /* Animación suave en el cambio de color */
+}
+
+/* Estilo para el botón del cotizador cuando se pasa el ratón */
+.cotizador_button:hover {
+  background-color: #1ed760; /* Verde un poco más claro */
+}
+
+/* Estilo para el título */
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700; /* Más negrita */
+  margin-bottom: 1rem;
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Estilos específicos para las divisiones */
+.div1 {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+.div2 {
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  width: 100%;
+  height: 95%;
+  position: relative;
+  overflow: hidden;
+}
+
+.div3 {
+  grid-column: span 4 / span 4;
+  grid-row: span 3 / span 3;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  width: 100%;
+  height: 95%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div4 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
+
+
+
+/* Estilos personalizados para el scrollbar */
+.div1::-webkit-scrollbar,
+.div2::-webkit-scrollbar,
+.div3::-webkit-scrollbar,
+.div4::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar vertical */
+  height: 8px; /* Alto del scrollbar horizontal */
+}
+
+/* Track del scrollbar */
+.div1::-webkit-scrollbar-track,
+.div2::-webkit-scrollbar-track,
+.div3::-webkit-scrollbar-track,
+.div4::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Fondo del track del scrollbar */
+  border-radius: 8px; /* Esquinas redondeadas del track */
+}
+
+/* Thumb del scrollbar */
+.div1::-webkit-scrollbar-thumb,
+.div2::-webkit-scrollbar-thumb,
+.div3::-webkit-scrollbar-thumb,
+.div4::-webkit-scrollbar-thumb {
+  background-color: #555; /* Color del thumb del scrollbar */
+  border-radius: 8px; /* Esquinas redondeadas del thumb */
+}
+
+/* Thumb del scrollbar al hacer hover */
+.div1::-webkit-scrollbar-thumb:hover,
+.div2::-webkit-scrollbar-thumb:hover,
+.div3::-webkit-scrollbar-thumb:hover,
+.div4::-webkit-scrollbar-thumb:hover {
+  background-color: #333; /* Color más oscuro al hacer hover */
+}
